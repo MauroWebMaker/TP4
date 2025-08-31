@@ -8,18 +8,16 @@ import java.util.HashSet;
  */
 public class Alumno {
     private int legajo;
-    private String apellido, nombre;
-    private HashSet<Materia> materia;
+    private String apellido;
+    private String nombre;
+    private HashSet<Materia> materias;
 
-    public Alumno() {
-    }
-
-    
-    public Alumno(int legajo, String apellido, String nombre, HashSet<Materia> materia) {
+       
+    public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
-        this.materia = materia;
+        this.materias = new HashSet <>();
     }
 
     public int getLegajo() {
@@ -47,18 +45,26 @@ public class Alumno {
     }
 
     public HashSet<Materia> getMateria() {
-        return materia;
+        return materias;
     }
 
     public void setMaterias(HashSet<Materia> materia) {
-        this.materia = materia;
+        this.materias = materia;
     }
     
- /**
- *  public void agregarMateria(){
+    @Override
+    public String toString() {
+        return "Alumno{" + "numeroLegajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
     }
-    public void cantidadMaterias(){
+    
+    
+    public boolean agregarMateria (Materia m){
+        return materias.add(m); 
+        } // pide un void, pero te tira error. Me deja poner boolean.
+   
+    public int cantidadMaterias(){
+        return materias.size();
     }
- * 
- */
+    
+ 
 }
