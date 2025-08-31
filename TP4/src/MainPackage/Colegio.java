@@ -1,6 +1,8 @@
 
 package MainPackage;
 
+import java.util.HashSet;
+
 /**
  * 1. Crear las materias:  
     a. Web 2 de segundo año. Listo 
@@ -16,6 +18,10 @@ package MainPackage;
  * @author Grupo 11
  */
 public class Colegio {
+    
+    public static HashSet <Alumno> lsitaAlumnos = new HashSet<>();
+    public static HashSet <Materia> lsitaMaterias = new HashSet<>();
+    
     public static void main(String[] args) {
         
     
