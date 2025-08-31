@@ -30,12 +30,12 @@ public class Materia {
         this.idMateria = idMateria;
     }
 
-    public int getAnio() {
+    public int getAno() {
         return ano;
     }
 
-    public void setAnio(int anio) {
-        this.ano = anio;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
     public String getNombre() {
@@ -76,10 +76,10 @@ public class Materia {
         return Objects.equals(this.nombre, other.nombre);
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Materia{" + "idMateria=" + idMateria + ", ano=" + ano + ", nombre=" + nombre + '}';
-    }
+    }/*
     
     
     

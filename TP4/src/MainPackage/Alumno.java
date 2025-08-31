@@ -52,15 +52,15 @@ public class Alumno {
         this.materias = materia;
     }
     
-    @Override
+    /*@Override
     public String toString() {
         return "Alumno{" + "numeroLegajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
-    }
+    }*/
     
     
-    public boolean agregarMateria (Materia m){
-        return materias.add(m); 
-        } // pide un void, pero te tira error. Me deja poner boolean.
+    public void agregarMateria (Materia m){
+        materias.add(m); 
+        } 
    
     public int cantidadMaterias(){
         return materias.size();

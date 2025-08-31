@@ -24,8 +24,6 @@ public class Colegio {
     
     public static void main(String[] args) {
         
-    
-    
         Materia web2 = new Materia(101,2, "Web2");
         Materia matematicas = new Materia(102,1,  "Matematicas");
         Materia lab1 = new Materia(103, 1, "Laboratorio1");
