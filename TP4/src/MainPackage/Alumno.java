@@ -1,23 +1,23 @@
-
 package MainPackage;
 
 import java.util.HashSet;
+
 /**
  *
  * @author Grupo 11
  */
 public class Alumno {
+
     private int legajo;
     private String apellido;
     private String nombre;
     private HashSet<Materia> materias;
 
-       
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
-        this.materias = new HashSet <>();
+        this.materias = new HashSet<>();
     }
 
     public int getLegajo() {
@@ -51,20 +51,17 @@ public class Alumno {
     public void setMaterias(HashSet<Materia> materia) {
         this.materias = materia;
     }
-    
+
     /*@Override
     public String toString() {
         return "Alumno{" + "numeroLegajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
     }*/
-    
-    
-    public void agregarMateria (Materia m){
-        materias.add(m); 
-        } 
-   
-    public int cantidadMaterias(){
+    public void agregarMateria(Materia m) {
+        materias.add(m);
+    }
+
+    public int cantidadMaterias() {
         return materias.size();
     }
-    
- 
+
 }

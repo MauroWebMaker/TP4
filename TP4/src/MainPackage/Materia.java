@@ -1,4 +1,3 @@
-
 package MainPackage;
 
 import java.util.Objects;
@@ -8,7 +7,7 @@ import java.util.Objects;
  * @author Mauro
  */
 public class Materia {
-    
+
     private int idMateria;
     private int ano;
     private String nombre;
@@ -79,8 +78,6 @@ public class Materia {
     /*@Override
     public String toString() {
         return "Materia{" + "idMateria=" + idMateria + ", ano=" + ano + ", nombre=" + nombre + '}';
-    }/*
-    
-    
-    
+    }
+     */
 }
