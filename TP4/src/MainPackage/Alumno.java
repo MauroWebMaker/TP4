@@ -3,7 +3,6 @@ package MainPackage;
 import java.util.HashSet;
 
 /**
- *
  * @author Grupo 11
  */
 public class Alumno {

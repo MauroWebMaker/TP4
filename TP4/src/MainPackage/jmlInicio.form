@@ -5,6 +5,9 @@
     <Menu class="javax.swing.JMenuBar" name="menu_principal">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[227, 23]"/>
+        </Property>
       </Properties>
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="Alumno">
@@ -35,6 +38,9 @@
                 <Property name="text" type="java.lang.String" value="Alta de materias"/>
                 <Property name="actionCommand" type="java.lang.String" value="AgregarMateria"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AltaDeMateriasActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -47,6 +53,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Formulario de Incripciones"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FormularioDeInscripcionActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -54,11 +63,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salirActionPerformed"/>
+          </Events>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="Saliste">
+            <MenuItem class="javax.swing.JMenuItem" name="Salir">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Salir"/>
+                <Property name="text" type="java.lang.String" value="Salir?"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalirActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

@@ -3,8 +3,7 @@ package MainPackage;
 import java.util.Objects;
 
 /**
- *
- * @author Mauro
+ * @author Grupo 11
  */
 public class Materia {
 
