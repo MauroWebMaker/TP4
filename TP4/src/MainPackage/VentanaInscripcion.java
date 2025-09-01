@@ -1,8 +1,11 @@
+
+import static MainPackage.Colegio.listaMaterias;
+import MainPackage.Materia;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-
 /**
  *
  * @author Jeremias
@@ -57,14 +60,13 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
             }
         });
 
-        ElijaAlumnoBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pibe 1", "Pibe 2", "Pibe 3", "Pibe 4" }));
         ElijaAlumnoBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ElijaAlumnoBoxActionPerformed(evt);
             }
         });
 
-        ElijaMateriaBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Web II", "Matematicas", "Laboratorio I" }));
+        ElijaMateriaBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Web II", "Matematica", "Laboratorio I" }));
         ElijaMateriaBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ElijaMateriaBoxActionPerformed(evt);
@@ -80,26 +82,24 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(ElijaAlumnoBox, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ElijaMateriaBox, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(InscribirAlumno)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(SalirAlumno)
+                .addGap(20, 20, 20))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(10, 10, 10)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(215, 215, 215)
-                            .addComponent(InscribirAlumno)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 15, Short.MAX_VALUE)
-                            .addComponent(SalirAlumno))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(96, 96, 96)
-                                    .addComponent(FormulariodeMaterias))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(ElijaunAlumno)
-                                    .addComponent(ElijaunaMateria)))
-                            .addGap(0, 105, Short.MAX_VALUE)))
-                    .addGap(10, 10, 10)))
+                            .addGap(96, 96, 96)
+                            .addComponent(FormulariodeMaterias))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ElijaunAlumno)
+                            .addComponent(ElijaunaMateria)))
+                    .addContainerGap(87, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +108,11 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
                 .addComponent(ElijaMateriaBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ElijaAlumnoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(InscribirAlumno)
+                    .addComponent(SalirAlumno))
+                .addGap(34, 34, 34))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(22, 22, 22)
@@ -117,11 +121,7 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
                     .addComponent(ElijaunaMateria)
                     .addGap(18, 18, 18)
                     .addComponent(ElijaunAlumno)
-                    .addGap(106, 106, 106)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(InscribirAlumno)
-                        .addComponent(SalirAlumno))
-                    .addContainerGap(34, Short.MAX_VALUE)))
+                    .addContainerGap(163, Short.MAX_VALUE)))
         );
 
         pack();
@@ -132,15 +132,15 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_InscribirAlumnoActionPerformed
 
     private void SalirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirAlumnoActionPerformed
-        // TODO add your handling code here:
+        System.out.println(listaMaterias.toString());
     }//GEN-LAST:event_SalirAlumnoActionPerformed
 
     private void ElijaMateriaBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElijaMateriaBoxActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_ElijaMateriaBoxActionPerformed
 
     private void ElijaAlumnoBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElijaAlumnoBoxActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ElijaAlumnoBoxActionPerformed
 
 

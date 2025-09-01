@@ -1,4 +1,8 @@
 
+import MainPackage.Alumno;
+import static MainPackage.Colegio.listaMaterias;
+import MainPackage.Materia;
+import java.util.HashSet;
 import javax.swing.JOptionPane;
 
 /*
@@ -6,6 +10,9 @@ import javax.swing.JOptionPane;
  */
 public class jmlInicio extends javax.swing.JFrame {
 
+    public static HashSet<Alumno> listaAlumnos = new HashSet<>();
+    public static HashSet<Materia> listaMaterias = new HashSet<>();
+    
     public jmlInicio() {
         initComponents();
     }
@@ -37,11 +44,11 @@ public class jmlInicio extends javax.swing.JFrame {
         Escritorio.setLayout(EscritorioLayout);
         EscritorioLayout.setHorizontalGroup(
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 634, Short.MAX_VALUE)
+            .addGap(0, 375, Short.MAX_VALUE)
         );
         EscritorioLayout.setVerticalGroup(
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 473, Short.MAX_VALUE)
+            .addGap(0, 281, Short.MAX_VALUE)
         );
 
         menu_principal.setToolTipText("");
@@ -149,6 +156,7 @@ public class jmlInicio extends javax.swing.JFrame {
         aux.setVisible(true);
         Escritorio.add(aux);
         Escritorio.moveToFront(aux);
+        
     }//GEN-LAST:event_FormularioDeInscripcionActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
@@ -156,13 +164,9 @@ public class jmlInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-
         int aux = JOptionPane.showConfirmDialog(rootPane, "Seguro que desea salir ?", "Estas seguro ??", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (aux == JOptionPane.YES_OPTION) {
-            System.out.println("Bai");
             System.exit(0);
-        } else {
-            System.out.println("Casi te vas jaja");
         }
     }//GEN-LAST:event_SalirActionPerformed
 
@@ -171,6 +175,13 @@ public class jmlInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_EscritorioFocusLost
 
     public static void main(String args[]) {
+        Materia web2 = new Materia(101, 2, "Web2");
+        Materia matematicas = new Materia(102, 1, "Matematicas");
+        Materia lab1 = new Materia(103, 1, "Laboratorio1");
+        
+        listaMaterias.add(web2);
+        listaMaterias.add(matematicas);
+        listaMaterias.add(lab1);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -196,6 +207,7 @@ public class jmlInicio extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new jmlInicio().setVisible(true);
             }
@@ -214,4 +226,14 @@ public class jmlInicio extends javax.swing.JFrame {
     private javax.swing.JMenuBar menu_principal;
     private javax.swing.JMenu salir;
     // End of variables declaration//GEN-END:variables
+    
+    public void cargarAlumnos(Integer legajo, String nombre, String apellido){
+        Alumno a = new Alumno(legajo,nombre,apellido);
+        listaAlumnos.add(a);
+    }
+    
+    public void cargarMateria(Integer id, Integer ano, String nombre){
+        Materia m = new Materia(id,ano,nombre);
+        listaMaterias.add(m);
+    }
 }

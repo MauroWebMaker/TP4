@@ -7,8 +7,8 @@ import java.util.HashSet;
  */
 public class Colegio {
 
-    public static HashSet<Alumno> lsitaAlumnos = new HashSet<>();
-    public static HashSet<Materia> lsitaMaterias = new HashSet<>();
+    public static HashSet<Alumno> listaAlumnos = new HashSet<>();
+    public static HashSet<Materia> listaMaterias = new HashSet<>();
 
     public static void main(String[] args) {
 

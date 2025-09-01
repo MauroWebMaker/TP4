@@ -28,33 +28,29 @@
                   <Component id="ElijaAlumnoBox" min="-2" pref="115" max="-2" attributes="0"/>
                   <Component id="ElijaMateriaBox" min="-2" pref="115" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="168" max="32767" attributes="0"/>
+              <EmptySpace pref="138" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="InscribirAlumno" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="SalirAlumno" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="215" pref="215" max="-2" attributes="0"/>
-                          <Component id="InscribirAlumno" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" pref="15" max="32767" attributes="0"/>
-                          <Component id="SalirAlumno" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="FormulariodeMaterias" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="FormulariodeMaterias" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="ElijaunAlumno" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ElijaunaMateria" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="105" max="32767" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Component id="ElijaunAlumno" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="ElijaunaMateria" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace pref="87" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -66,7 +62,12 @@
               <Component id="ElijaMateriaBox" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="ElijaAlumnoBox" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="160" max="32767" attributes="0"/>
+              <EmptySpace pref="103" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="InscribirAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="SalirAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -76,12 +77,7 @@
                   <Component id="ElijaunaMateria" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="ElijaunAlumno" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="106" pref="106" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="InscribirAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="SalirAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="34" max="32767" attributes="0"/>
+                  <EmptySpace pref="163" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -128,12 +124,7 @@
     <Component class="javax.swing.JComboBox" name="ElijaAlumnoBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Pibe 1"/>
-            <StringItem index="1" value="Pibe 2"/>
-            <StringItem index="2" value="Pibe 3"/>
-            <StringItem index="3" value="Pibe 4"/>
-          </StringArray>
+          <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
@@ -148,7 +139,7 @@
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
             <StringItem index="0" value="Web II"/>
-            <StringItem index="1" value="Matematicas"/>
+            <StringItem index="1" value="Matematica"/>
             <StringItem index="2" value="Laboratorio I"/>
           </StringArray>
         </Property>

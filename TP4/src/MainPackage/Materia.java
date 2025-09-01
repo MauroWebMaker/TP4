@@ -7,32 +7,32 @@ import java.util.Objects;
  */
 public class Materia {
 
-    private int idMateria;
-    private int ano;
+    private Integer idMateria;
+    private Integer ano;
     private String nombre;
 
     public Materia() {
     }
 
-    public Materia(int idMateria, int ano, String nombre) {
+    public Materia(Integer idMateria, Integer ano, String nombre) {
         this.idMateria = idMateria;
         this.ano = ano;
         this.nombre = nombre;
     }
 
-    public int getIdMateria() {
+    public Integer getIdMateria() {
         return idMateria;
     }
 
-    public void setIdMateria(int idMateria) {
+    public void setIdMateria(Integer idMateria) {
         this.idMateria = idMateria;
     }
 
-    public int getAno() {
+    public Integer getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(Integer ano) {
         this.ano = ano;
     }
 
@@ -73,10 +73,9 @@ public class Materia {
         }
         return Objects.equals(this.nombre, other.nombre);
     }
-
-    /*@Override
+    
+    @Override
     public String toString() {
         return "Materia{" + "idMateria=" + idMateria + ", ano=" + ano + ", nombre=" + nombre + '}';
     }
-     */
 }

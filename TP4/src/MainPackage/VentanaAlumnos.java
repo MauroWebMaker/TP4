@@ -1,12 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 
-/**
- *
- * @author Jeremias
- */
+import MainPackage.Alumno;
+import MainPackage.Colegio;
+import javax.swing.JOptionPane;
+
 public class VentanaAlumnos extends javax.swing.JInternalFrame {
 
     /**
@@ -35,8 +31,6 @@ public class VentanaAlumnos extends javax.swing.JInternalFrame {
         ingreseLegajo = new javax.swing.JTextField();
         ingreseApellido = new javax.swing.JTextField();
         ingreseNombre = new javax.swing.JTextField();
-
-        setClosable(true);
 
         guardarAlumno.setText("Guardar");
         guardarAlumno.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +62,12 @@ public class VentanaAlumnos extends javax.swing.JInternalFrame {
         Apellido.setText("Apellido:");
 
         Nombre.setText("Nombre:");
+
+        ingreseLegajo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ingreseLegajoActionPerformed(evt);
+            }
+        });
 
         ingreseApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,20 +135,33 @@ public class VentanaAlumnos extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void guardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarAlumnoActionPerformed
-        // TODO add your handling code here:
+        if(!ingreseLegajo.getText().isEmpty() && !ingreseApellido.getText().isEmpty() && !ingreseNombre.getText().isEmpty()){
+            Alumno a = new Alumno(Integer.parseInt(ingreseLegajo.getText()),ingreseApellido.getText(),ingreseNombre.getText());
+            jmlInicio.listaAlumnos.add(a);
+            JOptionPane.showMessageDialog(this, "Alumno agregado con éxito", "Alumno Agregado", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_guardarAlumnoActionPerformed
 
     private void nuevoAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoAlumnoActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Limpiando casillas...", "Limpiando", JOptionPane.INFORMATION_MESSAGE);
+        ingreseLegajo.setText("");
+        ingreseNombre.setText("");
+        ingreseApellido.setText("");
     }//GEN-LAST:event_nuevoAlumnoActionPerformed
 
     private void salirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirAlumnoActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_salirAlumnoActionPerformed
 
     private void ingreseApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingreseApellidoActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ingreseApellidoActionPerformed
+
+    private void ingreseLegajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingreseLegajoActionPerformed
+        
+    }//GEN-LAST:event_ingreseLegajoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

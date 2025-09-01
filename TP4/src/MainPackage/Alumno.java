@@ -7,23 +7,23 @@ import java.util.HashSet;
  */
 public class Alumno {
 
-    private int legajo;
+    private Integer legajo;
     private String apellido;
     private String nombre;
     private HashSet<Materia> materias;
 
-    public Alumno(int legajo, String apellido, String nombre) {
+    public Alumno(Integer legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
         this.materias = new HashSet<>();
     }
 
-    public int getLegajo() {
+    public Integer getLegajo() {
         return legajo;
     }
 
-    public void setLegajo(int legajo) {
+    public void setLegajo(Integer legajo) {
         this.legajo = legajo;
     }
 
