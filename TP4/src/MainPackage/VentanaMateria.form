@@ -26,11 +26,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
-                      <Component id="Guardar" min="-2" max="-2" attributes="0"/>
+                      <Component id="GuardarMateria" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="Nuevo" min="-2" max="-2" attributes="0"/>
+                      <Component id="NuevoMateria" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" pref="15" max="32767" attributes="0"/>
-                      <Component id="Salir" min="-2" max="-2" attributes="0"/>
+                      <Component id="SalirMateria" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -47,9 +47,9 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jTextField1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" min="-2" pref="181" max="-2" attributes="0"/>
+                                  <Component id="AnioPerteneceMateria" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="CodigoMateria" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="NombreDeMateria" min="-2" pref="181" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -68,23 +68,23 @@
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Codigodemateria" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CodigoMateria" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="NombredelaMateria" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="NombreDeMateria" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="AñoalquePertenece" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="AnioPerteneceMateria" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="66" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Nuevo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Salir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="GuardarMateria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="NuevoMateria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="SalirMateria" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
           </Group>
@@ -97,43 +97,43 @@
         <Property name="text" type="java.lang.String" value="A&#xf1;o al que Pertenece:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="CodigoMateria">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CodigoMateriaActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="NombreDeMateria">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombreDeMateriaActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField3"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="AnioPerteneceMateria">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnioPerteneceMateriaActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Guardar">
+    <Component class="javax.swing.JButton" name="GuardarMateria">
       <Properties>
         <Property name="text" type="java.lang.String" value="Guardar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarMateriaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Nuevo">
+    <Component class="javax.swing.JButton" name="NuevoMateria">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nuevo"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NuevoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NuevoMateriaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Salir">
+    <Component class="javax.swing.JButton" name="SalirMateria">
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalirActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalirMateriaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="FormulariodeMaterias">

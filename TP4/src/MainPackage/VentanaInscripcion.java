@@ -28,10 +28,10 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
         FormulariodeMaterias = new javax.swing.JLabel();
         ElijaunaMateria = new javax.swing.JLabel();
         ElijaunAlumno = new javax.swing.JLabel();
-        Inscribir = new javax.swing.JButton();
-        Salir = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        InscribirAlumno = new javax.swing.JButton();
+        SalirAlumno = new javax.swing.JButton();
+        ElijaAlumnoBox = new javax.swing.JComboBox<>();
+        ElijaMateriaBox = new javax.swing.JComboBox<>();
 
         setClosable(true);
 
@@ -43,23 +43,33 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
 
         ElijaunAlumno.setText("Elija un Alumno:");
 
-        Inscribir.setText("Inscribir");
-        Inscribir.addActionListener(new java.awt.event.ActionListener() {
+        InscribirAlumno.setText("Inscribir");
+        InscribirAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InscribirActionPerformed(evt);
+                InscribirAlumnoActionPerformed(evt);
             }
         });
 
-        Salir.setText("Salir");
-        Salir.addActionListener(new java.awt.event.ActionListener() {
+        SalirAlumno.setText("Salir");
+        SalirAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalirActionPerformed(evt);
+                SalirAlumnoActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ElijaAlumnoBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pibe 1", "Pibe 2", "Pibe 3", "Pibe 4" }));
+        ElijaAlumnoBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ElijaAlumnoBoxActionPerformed(evt);
+            }
+        });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ElijaMateriaBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Web II", "Matematicas", "Laboratorio I" }));
+        ElijaMateriaBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ElijaMateriaBoxActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,8 +78,8 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(111, 111, 111)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ElijaAlumnoBox, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ElijaMateriaBox, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(168, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -77,9 +87,9 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(215, 215, 215)
-                            .addComponent(Inscribir)
+                            .addComponent(InscribirAlumno)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 15, Short.MAX_VALUE)
-                            .addComponent(Salir))
+                            .addComponent(SalirAlumno))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
@@ -95,9 +105,9 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ElijaMateriaBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ElijaAlumnoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(160, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -109,30 +119,38 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
                     .addComponent(ElijaunAlumno)
                     .addGap(106, 106, 106)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Inscribir)
-                        .addComponent(Salir))
+                        .addComponent(InscribirAlumno)
+                        .addComponent(SalirAlumno))
                     .addContainerGap(34, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void InscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscribirActionPerformed
+    private void InscribirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscribirAlumnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_InscribirActionPerformed
+    }//GEN-LAST:event_InscribirAlumnoActionPerformed
 
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+    private void SalirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirAlumnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalirActionPerformed
+    }//GEN-LAST:event_SalirAlumnoActionPerformed
+
+    private void ElijaMateriaBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElijaMateriaBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ElijaMateriaBoxActionPerformed
+
+    private void ElijaAlumnoBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElijaAlumnoBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ElijaAlumnoBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ElijaAlumnoBox;
+    private javax.swing.JComboBox<String> ElijaMateriaBox;
     private javax.swing.JLabel ElijaunAlumno;
     private javax.swing.JLabel ElijaunaMateria;
     private javax.swing.JLabel FormulariodeMaterias;
-    private javax.swing.JButton Inscribir;
-    private javax.swing.JButton Salir;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JButton InscribirAlumno;
+    private javax.swing.JButton SalirAlumno;
     // End of variables declaration//GEN-END:variables
 }

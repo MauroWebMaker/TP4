@@ -1,3 +1,4 @@
+
 import javax.swing.JOptionPane;
 
 /*
@@ -13,7 +14,7 @@ public class jmlInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        Escritorio = new javax.swing.JDesktopPane();
         menu_principal = new javax.swing.JMenuBar();
         Alumno = new javax.swing.JMenu();
         AltaDeAlumnos = new javax.swing.JMenuItem();
@@ -26,15 +27,21 @@ public class jmlInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 646, Short.MAX_VALUE)
+        Escritorio.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                EscritorioFocusLost(evt);
+            }
+        });
+
+        javax.swing.GroupLayout EscritorioLayout = new javax.swing.GroupLayout(Escritorio);
+        Escritorio.setLayout(EscritorioLayout);
+        EscritorioLayout.setHorizontalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 634, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 477, Short.MAX_VALUE)
+        EscritorioLayout.setVerticalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 473, Short.MAX_VALUE)
         );
 
         menu_principal.setToolTipText("");
@@ -101,48 +108,67 @@ public class jmlInicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Escritorio)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Escritorio)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void AltaDeAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaDeAlumnosActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
         VentanaAlumnos aux = new VentanaAlumnos();
-        menu_principal.add(aux);
         aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
+
     }//GEN-LAST:event_AltaDeAlumnosActionPerformed
 
     private void AltaDeMateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaDeMateriasActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
         VentanaMateria aux = new VentanaMateria();
-        menu_principal.add(aux);
         aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
     }//GEN-LAST:event_AltaDeMateriasActionPerformed
 
     private void FormularioDeInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FormularioDeInscripcionActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
         VentanaInscripcion aux = new VentanaInscripcion();
-        menu_principal.add(aux);
         aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
     }//GEN-LAST:event_FormularioDeInscripcionActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-
+        //eta vaina tampoco pero ta chistosa
     }//GEN-LAST:event_salirActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
 
-        int aux = JOptionPane.showConfirmDialog(rootPane, "Seguro que desea salir ?","Estas seguro ??", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (aux==JOptionPane.YES_OPTION) {
+        int aux = JOptionPane.showConfirmDialog(rootPane, "Seguro que desea salir ?", "Estas seguro ??", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (aux == JOptionPane.YES_OPTION) {
             System.out.println("Bai");
             System.exit(0);
-        }else{
+        } else {
             System.out.println("Casi te vas jaja");
         }
     }//GEN-LAST:event_SalirActionPerformed
+
+    private void EscritorioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EscritorioFocusLost
+        // esto nada que ver, toque mal
+    }//GEN-LAST:event_EscritorioFocusLost
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -180,11 +206,11 @@ public class jmlInicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem AltaDeAlumnos;
     private javax.swing.JMenuItem AltaDeMaterias;
     private javax.swing.JMenu Alumno;
+    private javax.swing.JDesktopPane Escritorio;
     private javax.swing.JMenuItem FormularioDeInscripcion;
     private javax.swing.JMenu Inscripcion;
     private javax.swing.JMenu Materia;
     private javax.swing.JMenuItem Salir;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenuBar menu_principal;
     private javax.swing.JMenu salir;
     // End of variables declaration//GEN-END:variables

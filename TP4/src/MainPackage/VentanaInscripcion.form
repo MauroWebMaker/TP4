@@ -25,8 +25,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jComboBox1" min="-2" pref="115" max="-2" attributes="0"/>
-                  <Component id="jComboBox2" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="ElijaAlumnoBox" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="ElijaMateriaBox" min="-2" pref="115" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="168" max="32767" attributes="0"/>
           </Group>
@@ -36,9 +36,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="215" pref="215" max="-2" attributes="0"/>
-                          <Component id="Inscribir" min="-2" max="-2" attributes="0"/>
+                          <Component id="InscribirAlumno" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" pref="15" max="32767" attributes="0"/>
-                          <Component id="Salir" min="-2" max="-2" attributes="0"/>
+                          <Component id="SalirAlumno" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -63,9 +63,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-              <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+              <Component id="ElijaMateriaBox" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+              <Component id="ElijaAlumnoBox" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="160" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -78,8 +78,8 @@
                   <Component id="ElijaunAlumno" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="106" pref="106" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Inscribir" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Salir" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="InscribirAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SalirAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
@@ -109,48 +109,53 @@
         <Property name="text" type="java.lang.String" value="Elija un Alumno:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Inscribir">
+    <Component class="javax.swing.JButton" name="InscribirAlumno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Inscribir"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InscribirActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InscribirAlumnoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Salir">
+    <Component class="javax.swing.JButton" name="SalirAlumno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalirActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalirAlumnoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="ElijaAlumnoBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+            <StringItem index="0" value="Pibe 1"/>
+            <StringItem index="1" value="Pibe 2"/>
+            <StringItem index="2" value="Pibe 3"/>
+            <StringItem index="3" value="Pibe 4"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ElijaAlumnoBoxActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox2">
+    <Component class="javax.swing.JComboBox" name="ElijaMateriaBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Web II"/>
+            <StringItem index="1" value="Matematicas"/>
+            <StringItem index="2" value="Laboratorio I"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ElijaMateriaBoxActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

@@ -26,12 +26,12 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         AñoalquePertenece = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        Guardar = new javax.swing.JButton();
-        Nuevo = new javax.swing.JButton();
-        Salir = new javax.swing.JButton();
+        CodigoMateria = new javax.swing.JTextField();
+        NombreDeMateria = new javax.swing.JTextField();
+        AnioPerteneceMateria = new javax.swing.JTextField();
+        GuardarMateria = new javax.swing.JButton();
+        NuevoMateria = new javax.swing.JButton();
+        SalirMateria = new javax.swing.JButton();
         FormulariodeMaterias = new javax.swing.JLabel();
         Codigodemateria = new javax.swing.JLabel();
         NombredelaMateria = new javax.swing.JLabel();
@@ -40,30 +40,42 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
 
         AñoalquePertenece.setText("Año al que Pertenece:");
 
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
-
-        jTextField3.setText("jTextField3");
-
-        Guardar.setText("Guardar");
-        Guardar.addActionListener(new java.awt.event.ActionListener() {
+        CodigoMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GuardarActionPerformed(evt);
+                CodigoMateriaActionPerformed(evt);
             }
         });
 
-        Nuevo.setText("Nuevo");
-        Nuevo.addActionListener(new java.awt.event.ActionListener() {
+        NombreDeMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NuevoActionPerformed(evt);
+                NombreDeMateriaActionPerformed(evt);
             }
         });
 
-        Salir.setText("Salir");
-        Salir.addActionListener(new java.awt.event.ActionListener() {
+        AnioPerteneceMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalirActionPerformed(evt);
+                AnioPerteneceMateriaActionPerformed(evt);
+            }
+        });
+
+        GuardarMateria.setText("Guardar");
+        GuardarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarMateriaActionPerformed(evt);
+            }
+        });
+
+        NuevoMateria.setText("Nuevo");
+        NuevoMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NuevoMateriaActionPerformed(evt);
+            }
+        });
+
+        SalirMateria.setText("Salir");
+        SalirMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirMateriaActionPerformed(evt);
             }
         });
 
@@ -83,11 +95,11 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(145, 145, 145)
-                        .addComponent(Guardar)
+                        .addComponent(GuardarMateria)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Nuevo)
+                        .addComponent(NuevoMateria)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 15, Short.MAX_VALUE)
-                        .addComponent(Salir))
+                        .addComponent(SalirMateria))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -101,9 +113,9 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
                                     .addComponent(AñoalquePertenece))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(AnioPerteneceMateria)
+                                    .addComponent(CodigoMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NombreDeMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 55, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -115,49 +127,61 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Codigodemateria)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CodigoMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NombredelaMateria)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NombreDeMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AñoalquePertenece)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AnioPerteneceMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Guardar)
-                    .addComponent(Nuevo)
-                    .addComponent(Salir))
+                    .addComponent(GuardarMateria)
+                    .addComponent(NuevoMateria)
+                    .addComponent(SalirMateria))
                 .addGap(38, 38, 38))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
+    private void GuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarMateriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_GuardarActionPerformed
+    }//GEN-LAST:event_GuardarMateriaActionPerformed
 
-    private void NuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoActionPerformed
+    private void NuevoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoMateriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NuevoActionPerformed
+    }//GEN-LAST:event_NuevoMateriaActionPerformed
 
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+    private void SalirMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirMateriaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalirActionPerformed
+    }//GEN-LAST:event_SalirMateriaActionPerformed
+
+    private void CodigoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CodigoMateriaActionPerformed
+
+    private void NombreDeMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreDeMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreDeMateriaActionPerformed
+
+    private void AnioPerteneceMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnioPerteneceMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnioPerteneceMateriaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AnioPerteneceMateria;
     private javax.swing.JLabel AñoalquePertenece;
+    private javax.swing.JTextField CodigoMateria;
     private javax.swing.JLabel Codigodemateria;
     private javax.swing.JLabel FormulariodeMaterias;
-    private javax.swing.JButton Guardar;
+    private javax.swing.JButton GuardarMateria;
+    private javax.swing.JTextField NombreDeMateria;
     private javax.swing.JLabel NombredelaMateria;
-    private javax.swing.JButton Nuevo;
-    private javax.swing.JButton Salir;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton NuevoMateria;
+    private javax.swing.JButton SalirMateria;
     // End of variables declaration//GEN-END:variables
 }

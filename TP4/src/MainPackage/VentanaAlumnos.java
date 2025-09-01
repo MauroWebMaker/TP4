@@ -25,38 +25,37 @@ public class VentanaAlumnos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Guardar = new javax.swing.JButton();
-        Nuevo = new javax.swing.JButton();
-        Salir = new javax.swing.JButton();
+        guardarAlumno = new javax.swing.JButton();
+        nuevoAlumno = new javax.swing.JButton();
+        salirAlumno = new javax.swing.JButton();
         FormulariodeAlumnos = new javax.swing.JLabel();
         Legajo = new javax.swing.JLabel();
         Apellido = new javax.swing.JLabel();
         Nombre = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        ingreseLegajo = new javax.swing.JTextField();
+        ingreseApellido = new javax.swing.JTextField();
+        ingreseNombre = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(51, 102, 255));
         setClosable(true);
 
-        Guardar.setText("Guardar");
-        Guardar.addActionListener(new java.awt.event.ActionListener() {
+        guardarAlumno.setText("Guardar");
+        guardarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GuardarActionPerformed(evt);
+                guardarAlumnoActionPerformed(evt);
             }
         });
 
-        Nuevo.setText("Nuevo");
-        Nuevo.addActionListener(new java.awt.event.ActionListener() {
+        nuevoAlumno.setText("Nuevo");
+        nuevoAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NuevoActionPerformed(evt);
+                nuevoAlumnoActionPerformed(evt);
             }
         });
 
-        Salir.setText("Salir");
-        Salir.addActionListener(new java.awt.event.ActionListener() {
+        salirAlumno.setText("Salir");
+        salirAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalirActionPerformed(evt);
+                salirAlumnoActionPerformed(evt);
             }
         });
 
@@ -70,14 +69,11 @@ public class VentanaAlumnos extends javax.swing.JInternalFrame {
 
         Nombre.setText("Nombre:");
 
-        jTextField2.setText("jTextField2");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        ingreseApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                ingreseApellidoActionPerformed(evt);
             }
         });
-
-        jTextField3.setText("jTextField3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,87 +83,84 @@ public class VentanaAlumnos extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(145, 145, 145)
-                        .addComponent(Guardar)
+                        .addComponent(guardarAlumno)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Nuevo)
+                        .addComponent(nuevoAlumno)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Salir))
+                        .addComponent(salirAlumno))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(110, 110, 110)
-                                .addComponent(FormulariodeAlumnos))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Apellido)
-                                    .addComponent(Legajo)
-                                    .addComponent(Nombre))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3)
-                                    .addComponent(jTextField2)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Apellido)
+                            .addComponent(Legajo)
+                            .addComponent(Nombre))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(FormulariodeAlumnos)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(ingreseNombre)
+                                .addComponent(ingreseApellido)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(ingreseLegajo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(0, 0, Short.MAX_VALUE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(7, 7, 7)
                 .addComponent(FormulariodeAlumnos)
-                .addGap(19, 19, 19)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Legajo)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ingreseLegajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Apellido)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ingreseApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ingreseNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Guardar)
-                    .addComponent(Nuevo)
-                    .addComponent(Salir))
+                    .addComponent(guardarAlumno)
+                    .addComponent(nuevoAlumno)
+                    .addComponent(salirAlumno))
                 .addGap(38, 38, 38))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
+    private void guardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarAlumnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_GuardarActionPerformed
+    }//GEN-LAST:event_guardarAlumnoActionPerformed
 
-    private void NuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoActionPerformed
+    private void nuevoAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoAlumnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NuevoActionPerformed
+    }//GEN-LAST:event_nuevoAlumnoActionPerformed
 
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+    private void salirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirAlumnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalirActionPerformed
+    }//GEN-LAST:event_salirAlumnoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void ingreseApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingreseApellidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_ingreseApellidoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Apellido;
     private javax.swing.JLabel FormulariodeAlumnos;
-    private javax.swing.JButton Guardar;
     private javax.swing.JLabel Legajo;
     private javax.swing.JLabel Nombre;
-    private javax.swing.JButton Nuevo;
-    private javax.swing.JButton Salir;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton guardarAlumno;
+    private javax.swing.JTextField ingreseApellido;
+    private javax.swing.JTextField ingreseLegajo;
+    private javax.swing.JTextField ingreseNombre;
+    private javax.swing.JButton nuevoAlumno;
+    private javax.swing.JButton salirAlumno;
     // End of variables declaration//GEN-END:variables
 }
