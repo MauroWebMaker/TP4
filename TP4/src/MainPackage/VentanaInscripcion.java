@@ -1,6 +1,8 @@
 
 import static MainPackage.Colegio.listaMaterias;
 import MainPackage.Materia;
+import java.util.HashSet;
+import javax.swing.DefaultComboBoxModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -17,6 +19,8 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
      */
     public VentanaInscripcion() {
         initComponents();
+        llenarComboBox(listaMaterias);
+        System.out.println(listaMaterias.toString());
     }
 
     /**
@@ -35,8 +39,6 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
         SalirAlumno = new javax.swing.JButton();
         ElijaAlumnoBox = new javax.swing.JComboBox<>();
         ElijaMateriaBox = new javax.swing.JComboBox<>();
-
-        setClosable(true);
 
         FormulariodeMaterias.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         FormulariodeMaterias.setForeground(new java.awt.Color(51, 51, 51));
@@ -132,7 +134,7 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_InscribirAlumnoActionPerformed
 
     private void SalirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirAlumnoActionPerformed
-        System.out.println(listaMaterias.toString());
+         this.dispose();
     }//GEN-LAST:event_SalirAlumnoActionPerformed
 
     private void ElijaMateriaBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElijaMateriaBoxActionPerformed
@@ -153,4 +155,16 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
     private javax.swing.JButton InscribirAlumno;
     private javax.swing.JButton SalirAlumno;
     // End of variables declaration//GEN-END:variables
+
+      private void llenarComboBox(HashSet<Materia> datos) {
+        DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
+        for (Materia aux : datos) {
+            modelo.addElement(aux.getNombre());
+        }
+        ElijaMateriaBox.setModel(modelo); 
+    }   
+     
+
+
 }
+

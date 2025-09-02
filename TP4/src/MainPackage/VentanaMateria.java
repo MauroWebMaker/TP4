@@ -1,3 +1,7 @@
+
+import MainPackage.Materia;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
@@ -36,9 +40,7 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
         Codigodemateria = new javax.swing.JLabel();
         NombredelaMateria = new javax.swing.JLabel();
 
-        setClosable(true);
-
-        AñoalquePertenece.setText("Año al que Pertenece:");
+        AñoalquePertenece.setText("Año al que pertenece:");
 
         CodigoMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,15 +150,24 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void GuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarMateriaActionPerformed
-        // TODO add your handling code here:
+         if(!CodigoMateria.getText().isEmpty() && !NombreDeMateria.getText().isEmpty() && !AnioPerteneceMateria.getText().isEmpty()){
+            Materia a = new Materia (Integer.parseInt(CodigoMateria.getText()),Integer.parseInt(AnioPerteneceMateria.getText()),NombreDeMateria.getText());
+            jmlInicio.listaMaterias.add(a);
+            JOptionPane.showMessageDialog(this, "Materia agregada con éxito", "Materia Agregada", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_GuardarMateriaActionPerformed
 
     private void NuevoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoMateriaActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Limpiando casillas...", "Limpiando", JOptionPane.INFORMATION_MESSAGE);
+        NombreDeMateria.setText("");
+        CodigoMateria.setText("");
+        AnioPerteneceMateria.setText("");
     }//GEN-LAST:event_NuevoMateriaActionPerformed
 
     private void SalirMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirMateriaActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_SalirMateriaActionPerformed
 
     private void CodigoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoMateriaActionPerformed
