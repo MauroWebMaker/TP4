@@ -1,16 +1,13 @@
 
-import static MainPackage.Colegio.listaMaterias;
+import MainPackage.Alumno;
 import MainPackage.Materia;
 import java.util.HashSet;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 /**
  *
- * @author Jeremias
+ * @author Jeremias ??
  */
 public class VentanaInscripcion extends javax.swing.JInternalFrame {
 
@@ -19,8 +16,8 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
      */
     public VentanaInscripcion() {
         initComponents();
-        llenarComboBox(listaMaterias);
-        System.out.println(listaMaterias.toString());
+        llenarMateria(jmlInicio.listaMaterias);
+        llenarAlumno(jmlInicio.listaAlumnos);
     }
 
     /**
@@ -130,19 +127,37 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void InscribirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscribirAlumnoActionPerformed
-        // TODO add your handling code here:
+        Materia n = new Materia();
+        String alumnoSeleccionado = (String) ElijaAlumnoBox.getSelectedItem();
+        String materiaSeleccionada = (String) ElijaMateriaBox.getSelectedItem();
+        for (Materia auxiliar4 : jmlInicio.listaMaterias) {
+            if (auxiliar4.getNombre().equalsIgnoreCase(materiaSeleccionada)) {
+                n = auxiliar4;
+            }
+        }
+        JOptionPane.showMessageDialog(this, "El Pibe ta inscripto", "Inscripción Realizada", JOptionPane.INFORMATION_MESSAGE);
+        for (Alumno auxiliar5 : jmlInicio.listaAlumnos) {
+            String nombreCompleto = auxiliar5.getApellido() + ", " + auxiliar5.getNombre();
+            if (nombreCompleto.equalsIgnoreCase(alumnoSeleccionado)) {
+                auxiliar5.agregarMateria(n);
+            }
+        }
+            
     }//GEN-LAST:event_InscribirAlumnoActionPerformed
 
     private void SalirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirAlumnoActionPerformed
-         this.dispose();
+        for (Alumno mostrar : jmlInicio.listaAlumnos) {
+            System.out.println(mostrar.toString());
+        }
+        this.dispose();
     }//GEN-LAST:event_SalirAlumnoActionPerformed
 
     private void ElijaMateriaBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElijaMateriaBoxActionPerformed
-        
+
     }//GEN-LAST:event_ElijaMateriaBoxActionPerformed
 
     private void ElijaAlumnoBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElijaAlumnoBoxActionPerformed
-
+        
     }//GEN-LAST:event_ElijaAlumnoBoxActionPerformed
 
 
@@ -156,15 +171,20 @@ public class VentanaInscripcion extends javax.swing.JInternalFrame {
     private javax.swing.JButton SalirAlumno;
     // End of variables declaration//GEN-END:variables
 
-      private void llenarComboBox(HashSet<Materia> datos) {
+    private void llenarMateria(HashSet<Materia> datos) {
         DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
         for (Materia aux : datos) {
             modelo.addElement(aux.getNombre());
         }
-        ElijaMateriaBox.setModel(modelo); 
-    }   
-     
+        ElijaMateriaBox.setModel(modelo);
+    }
 
+    private void llenarAlumno(HashSet<Alumno> datos) {
+        DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
+        for (Alumno aux : datos) {
+            modelo.addElement(aux.getApellido() + ", " + aux.getNombre());
+        }
+        ElijaAlumnoBox.setModel(modelo);
+    }
 
 }
-

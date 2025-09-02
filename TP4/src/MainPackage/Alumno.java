@@ -51,10 +51,10 @@ public class Alumno {
         this.materias = materia;
     }
 
-    /*@Override
+    @Override
     public String toString() {
         return "Alumno{" + "numeroLegajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
-    }*/
+    }
     public void agregarMateria(Materia m) {
         materias.add(m);
     }
