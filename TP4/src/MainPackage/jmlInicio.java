@@ -1,6 +1,5 @@
 
 import MainPackage.Alumno;
-import static MainPackage.Colegio.listaMaterias;
 import MainPackage.Materia;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
@@ -12,7 +11,7 @@ public class jmlInicio extends javax.swing.JFrame {
 
     public static HashSet<Alumno> listaAlumnos = new HashSet<>();
     public static HashSet<Materia> listaMaterias = new HashSet<>();
-    
+
     public jmlInicio() {
         initComponents();
     }
@@ -156,29 +155,29 @@ public class jmlInicio extends javax.swing.JFrame {
         aux.setVisible(true);
         Escritorio.add(aux);
         Escritorio.moveToFront(aux);
-        
+
     }//GEN-LAST:event_FormularioDeInscripcionActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-        //eta vaina tampoco pero ta chistosa
-    }//GEN-LAST:event_salirActionPerformed
 
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-        int aux = JOptionPane.showConfirmDialog(rootPane, "Seguro que desea salir ?", "Estas seguro ??", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (aux == JOptionPane.YES_OPTION) {
-            System.exit(0);
-        }
-    }//GEN-LAST:event_SalirActionPerformed
+    }//GEN-LAST:event_salirActionPerformed
 
     private void EscritorioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EscritorioFocusLost
         // esto nada que ver, toque mal
     }//GEN-LAST:event_EscritorioFocusLost
 
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        int aux = JOptionPane.showConfirmDialog(rootPane, "Seguro que desea salir ?", "Salir", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if (aux == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_SalirActionPerformed
+
     public static void main(String args[]) {
         Materia web2 = new Materia(101, 2, "Web2");
         Materia matematicas = new Materia(102, 1, "Matematicas");
         Materia lab1 = new Materia(103, 1, "Laboratorio1");
-        
+
         listaMaterias.add(web2);
         listaMaterias.add(matematicas);
         listaMaterias.add(lab1);
@@ -226,14 +225,14 @@ public class jmlInicio extends javax.swing.JFrame {
     private javax.swing.JMenuBar menu_principal;
     private javax.swing.JMenu salir;
     // End of variables declaration//GEN-END:variables
-    
-    public void cargarAlumnos(Integer legajo, String nombre, String apellido){
-        Alumno a = new Alumno(legajo,nombre,apellido);
+
+    public void cargarAlumnos(Integer legajo, String nombre, String apellido) {
+        Alumno a = new Alumno(legajo, nombre, apellido);
         listaAlumnos.add(a);
     }
-    
-    public void cargarMateria(Integer id, Integer ano, String nombre){
-        Materia m = new Materia(id,ano,nombre);
+
+    public void cargarMateria(Integer id, Integer ano, String nombre) {
+        Materia m = new Materia(id, ano, nombre);
         listaMaterias.add(m);
     }
 }

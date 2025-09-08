@@ -150,12 +150,16 @@ public class VentanaMateria extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void GuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarMateriaActionPerformed
-         if(!CodigoMateria.getText().isEmpty() && !NombreDeMateria.getText().isEmpty() && !AnioPerteneceMateria.getText().isEmpty()){
+        try{
+        if(!CodigoMateria.getText().isEmpty() && !NombreDeMateria.getText().isEmpty() && !AnioPerteneceMateria.getText().isEmpty()){
             Materia a = new Materia (Integer.parseInt(CodigoMateria.getText()),Integer.parseInt(AnioPerteneceMateria.getText()),NombreDeMateria.getText());
             jmlInicio.listaMaterias.add(a);
             JOptionPane.showMessageDialog(this, "Materia agregada con éxito", "Materia Agregada", JOptionPane.INFORMATION_MESSAGE);
         }else{
             JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "El casillero Codigo y/o Año solo aceptan números", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_GuardarMateriaActionPerformed
 

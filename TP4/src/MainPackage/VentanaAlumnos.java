@@ -135,12 +135,16 @@ public class VentanaAlumnos extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void guardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarAlumnoActionPerformed
-        if(!ingreseLegajo.getText().isEmpty() && !ingreseApellido.getText().isEmpty() && !ingreseNombre.getText().isEmpty()){
-            Alumno a = new Alumno(Integer.parseInt(ingreseLegajo.getText()),ingreseApellido.getText(),ingreseNombre.getText());
-            jmlInicio.listaAlumnos.add(a);
-            JOptionPane.showMessageDialog(this, "Alumno agregado con éxito", "Alumno Agregado", JOptionPane.INFORMATION_MESSAGE);
-        }else{
-            JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        try{
+            if(!ingreseLegajo.getText().isEmpty() && !ingreseApellido.getText().isEmpty() && !ingreseNombre.getText().isEmpty()){
+                Alumno a = new Alumno(Integer.parseInt(ingreseLegajo.getText()),ingreseApellido.getText(),ingreseNombre.getText());
+                jmlInicio.listaAlumnos.add(a);
+                JOptionPane.showMessageDialog(this, "Alumno agregado con éxito", "Alumno Agregado", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "El casillero legajo solo acepta números", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_guardarAlumnoActionPerformed
 
